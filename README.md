@@ -16,7 +16,7 @@ Before writing the code, the Pandas Library was imported. This grants access to 
 ### Problem #1
 Using knowledge obtained from the experiment and demonstrations: <br> 
 * (a) Load the corresponding .csv file into a data frame named cars using pandas <br>
-* Display the first five and last five rows of the resulting cars
+* (b) Display the first five and last five rows of the resulting cars
 
 **Solution A**
 ```
@@ -25,8 +25,9 @@ cars = pd.read_csv('cars.csv')
 cars
 ```
 <br>
-
+First, the variable 'cars' was declared. Inside the variable is the pd.read_csv calling the file 'cars.csv'. Then the cars dataframe was called to be printed.
 <br><br>
+
 **Results**
 
 <br><br>
@@ -37,9 +38,12 @@ cars
 B = cars.loc[(cars.index < 5) | (cars.index > 26), ['Model','mpg','cyl','disp','drat','wt','qsec','vs','am','gear','carb']]
 B
 ```
-
+<br>
+First, the variable 'B' was declared. To get the first and last 5 rows of the dataframe, the .loc syntax was used. To specify this, for the rows, the expressions: "(cars.index < 5) | (cars.index > 26)" were used. These located the indices that are less than 5 (i.e., 0, 1, 2, 3, 4) and the indices that are more than 26 (i.e., 27, 28, 29, 30, 31), which are the respective heads and tails of this specific dataframe. For the columns, all the columns in the dataframe were listed. The variable 'B' was then displayed.
 <br><br>
+
 **Results**
+
 <br><br>
 
 ### Problem #2
@@ -56,7 +60,10 @@ A = cars.loc[(cars.index < 5), # Get first 5 rows
             (cars.columns[1::2])] # Slice columns - starting at 1 with an increment of 2 
 A
 ```
+<br>
+First, the variable 'A' was declared. Inside the variable is a .loc syntax. In the rows selector, the first five indices were called using the expression: "(cars.index < 5)". For the columns selector, the odd-numbered columns were called using the expression: "(cars.columns[1::2])". The .columns syntax called the columns of the dataframe. "[1::2]" was the slicing used to specify which columns were to be shown; it means the columns that will be shown start at column 1, then it will increment by 2 until there are no more columns to be shown. The variable 'A' is then displayed.
 <br><br>
+
 **Results**
 <br><br>
 
@@ -66,7 +73,10 @@ A
 B = cars.loc[(cars['Model'] == 'Mazda RX4')]
 B
 ```
+<br>
+First, the variable 'B' was declared. Inside the variable is a .loc syntax. In the row selector, it searches for 'Mazda RX4' under the 'Model' column. Since the column wasn't specified, it shows the entire row. The variable 'B' is then displayed.
 <br><br>
+
 **Results**
 <br><br>
 
@@ -76,7 +86,10 @@ B
 C = cars.loc[(cars['Model']=='Camaro Z28'), ['Model','cyl']]
 C
 ```
+<br>
+First, the variable 'C' was declared. Inside the variable is a .loc syntax. In the row selector, it searches for 'Camaro Z28' under the 'Model' column. In the column selector, it specifies both 'Model' and 'cyl', so only those two columns appear. The variable 'C' is then displayed.
 <br><br>
+
 **Results**
 <br><br>
 
@@ -89,6 +102,9 @@ D = cars.loc[(cars['Model']=='Mazda RX4 Wag') |
             ['Model','cyl','gear']]
 D
 ```
+<br>
+First, the variable 'D' was declared. Inside the variable is a .loc syntax. In the row selector, it searches for 'Camaro Z28', 'Ford Pantera L', and 'Honda Civic' under the 'Model' column. In the column selector, it specifies both 'Model', 'cyl', and 'gear', so only those three columns appear. The variable 'D' is then displayed.
+
 <br><br>
 **Results**
 <br><br>
