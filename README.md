@@ -29,8 +29,10 @@ First, the variable 'cars' was declared. Inside the variable is the pd.read_csv 
 <br><br>
 
 **Results**
-
 <br><br>
+![alt text][P1A]
+
+[P1A]: Results/Results-P1-A.png
 
 **Solution B**
 ```
@@ -43,8 +45,10 @@ First, the variable 'B' was declared. To get the first and last 5 rows of the da
 <br><br>
 
 **Results**
-
 <br><br>
+![alt text][P1B]
+
+[P1B]: Results/Results-P1-B.png
 
 ### Problem #2
 Using the dataframe cars in problem 1, extract the following information using subsetting, slicing and indexing operations. <br> 
@@ -67,6 +71,10 @@ First, the variable 'A' was declared. Inside the variable is a .loc syntax. In t
 **Results**
 <br><br>
 
+![alt text][P2A]
+
+[P2A]: Results/Results-P2-A.png
+
 **Solution B**
 ```
 # Part B
@@ -79,6 +87,9 @@ First, the variable 'B' was declared. Inside the variable is a .loc syntax. In t
 
 **Results**
 <br><br>
+![alt text][P2B]
+
+[P2B]: Results/Results-P2-B.png
 
 **Solution C**
 ```
@@ -92,6 +103,9 @@ First, the variable 'C' was declared. Inside the variable is a .loc syntax. In t
 
 **Results**
 <br><br>
+![alt text][P2C]
+
+[P2C]: Results/Results-P2-C.png
 
 **Solution D**
 ```
@@ -104,12 +118,13 @@ D
 ```
 <br>
 First, the variable 'D' was declared. Inside the variable is a .loc syntax. In the row selector, it searches for 'Camaro Z28', 'Ford Pantera L', and 'Honda Civic' under the 'Model' column. In the column selector, it specifies both 'Model', 'cyl', and 'gear', so only those three columns appear. The variable 'D' is then displayed.
-
 <br><br>
+
 **Results**
 <br><br>
+![alt text][P2D]
 
-
+[P2D]: Results/Results-P2-D.png
 
 ## Author
 Bernardo, Jaqlyn Trazy B.
